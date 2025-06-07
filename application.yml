@@ -1,0 +1,21 @@
+server:
+  port: ${PORT}
+
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: demo
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+
+springdoc:
+  api-docs:
+    path: /api-docs
+    resolve-schema-properties: true
+
+  override-with-generic-response: false
+  paths-to-exclude: /**/api-docs,/swagger-resources/**
+  swagger-ui:
+    path: /

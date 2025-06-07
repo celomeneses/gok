@@ -1,0 +1,15 @@
+services:
+
+  mongodb:
+    image: mongo:6.0.13
+    container_name: demo-mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - demo-mongo-db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+
+volumes:
+  demo-mongo-db:
